@@ -8762,6 +8762,9 @@
         <layout>PricebookEntry-Price Book Entry Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>ProcessException-Process Exception Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Product2-Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -9983,6 +9986,10 @@
     <tabVisibilities>
         <tab>standard-Pricebook2</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ProcessException</tab>
+        <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Product2</tab>
