@@ -121,6 +121,46 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>CUSB_EmailError</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_TestEmailError</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_TestTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_TestUserStoryBundle</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_TestUserStoryBundleTriggerHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_TriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_UserStoryBundleController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_UserStoryBundleQueueable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_UserStoryBundleTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CUSB_UserStoryBundleTriggerHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>contactCountDeletePositiveTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5819,6 +5859,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__Deployment_Task__c.CUSB_Source_Deployment_Task__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>copado__Deployment_Task__c.copado__Notify_Task_Owner__c</field>
         <readable>false</readable>
@@ -8280,12 +8325,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>copado__User_Story__c.Bundle_User_Story__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>copado__User_Story__c.Datetime_Completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>copado__User_Story__c.Datetime_Deployed_To_Production__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__User_Story__c.Is_Bundle__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10132,6 +10187,10 @@
         <object>copado__User_Story__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>CUSB_UserStoryBundle</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
     <pageAccesses>
         <apexPage>copado__AddCCHRuleCriteria</apexPage>
         <enabled>false</enabled>

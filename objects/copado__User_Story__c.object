@@ -4759,6 +4759,21 @@
         <label>Work Manager Relations</label>
     </fieldSets>
     <fields>
+        <fullName>Bundle_User_Story__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Bundle (Parent) User Story</description>
+        <externalId>false</externalId>
+        <label>Bundle User Story</label>
+        <referenceTo>copado__User_Story__c</referenceTo>
+        <relationshipLabel>Bundled User Stories</relationshipLabel>
+        <relationshipName>Bundle_User_Stories</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Datetime_Completed__c</fullName>
         <description>This will get filled out with the current datetime the very first time this User Story gets marked as either &quot;Promote And Deploy&quot; or &quot;Ready To Promote&quot;. If this field is already filled out, it will not be updated, so this is filled in once and only once. This is filled in via the workflow rule &quot;Fill In Datetime Completed Field&quot;.</description>
         <externalId>false</externalId>
@@ -4777,6 +4792,17 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Is_Bundle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates when a User Story is a Bundle</description>
+        <externalId>false</externalId>
+        <label>Is Bundle</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Lead_Time_Hours__c</fullName>
@@ -7732,6 +7758,13 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
+        <fullName>Cancelling_a_child_user_story_bundled</fullName>
+        <active>true</active>
+        <description>Cancelling a child user story is not allowed.</description>
+        <errorConditionFormula>NOT( ISBLANK( Bundle_User_Story__c ) )  &amp;&amp;   ISPICKVAL(copado__Status__c, &apos;Cancelled&apos;)</errorConditionFormula>
+        <errorMessage>The user story status cannot be changed to Cancelled since it is part of a bundle and the bundle will continue moving the changes committed in this user story. You need to cancel the parent user story bundle first in order to cancel this user story.</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>Pull_Request_Approved</fullName>
         <active>false</active>
         <description>This enforces that a pull request for this User Story must first be approved before the User Story can be marked as &quot;Promote Change&quot; or &quot;Promote &amp; Deploy&quot;. The checkbox Pull Request Approved must equal true,</description>
@@ -7815,6 +7848,18 @@ SCA_Score__c &gt; 0
         <errorMessage>Test scratch orgs cannot be used for developments</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>User_Story_Bundle</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Bundle User Stories</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/CUSB_UserStoryBundle</url>
+    </webLinks>
     <webLinks>
         <fullName>copado__Add_Apex_Tests</fullName>
         <availability>online</availability>
