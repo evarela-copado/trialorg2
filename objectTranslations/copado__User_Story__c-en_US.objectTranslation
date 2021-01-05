@@ -62,8 +62,20 @@
         <name>Datetime_Deployed_To_Production__c</name>
     </fields>
     <fields>
+        <label><!-- Enable Logs --></label>
+        <name>Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
         <label><!-- Is Bundle --></label>
         <name>Is_Bundle__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>JIRA_key__c</name>
     </fields>
     <fields>
         <label><!-- Lead Time (Hours) --></label>
@@ -757,6 +769,10 @@
         <picklistValues>
             <masterLabel>Rejected</masterLabel>
             <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To Do</masterLabel>
+            <translation><!-- To Do --></translation>
         </picklistValues>
     </fields>
     <fields>
