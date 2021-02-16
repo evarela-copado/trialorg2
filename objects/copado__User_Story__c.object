@@ -128,11 +128,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>User_Story_Record_Page_Unmanaged</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -4756,6 +4759,21 @@
         <label>Work Manager Relations</label>
     </fieldSets>
     <fields>
+        <fullName>Bundle_User_Story__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Bundle (Parent) User Story</description>
+        <externalId>false</externalId>
+        <label>Bundle User Story</label>
+        <referenceTo>copado__User_Story__c</referenceTo>
+        <relationshipLabel>Bundled User Stories</relationshipLabel>
+        <relationshipName>Bundle_User_Stories</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Datetime_Completed__c</fullName>
         <description>This will get filled out with the current datetime the very first time this User Story gets marked as either &quot;Promote And Deploy&quot; or &quot;Ready To Promote&quot;. If this field is already filled out, it will not be updated, so this is filled in once and only once. This is filled in via the workflow rule &quot;Fill In Datetime Completed Field&quot;.</description>
         <externalId>false</externalId>
@@ -4774,6 +4792,49 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Enable_Logs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Enable Logs</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Bundle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates when a User Story is a Bundle</description>
+        <externalId>false</externalId>
+        <label>Is Bundle</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>JIRA_key__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>JIRA key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
     </fields>
     <fields>
         <fullName>Lead_Time_Hours__c</fullName>
@@ -6091,6 +6152,11 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                     <default>false</default>
                     <label>Cancelled</label>
                 </value>
+                <value>
+                    <fullName>To Do</fullName>
+                    <default>false</default>
+                    <label>To Do</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -6323,18 +6389,11 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
     <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
+        <columns>copado__Org_Credential__c</columns>
         <columns>copado__User_Story_Title__c</columns>
-        <columns>copado__userStory_Role__c</columns>
-        <columns>copado__userStory_need__c</columns>
-        <columns>copado__userStory_reason__c</columns>
-        <columns>copado__Story_Points_SFDC__c</columns>
-        <columns>copado__Story_Points_Other__c</columns>
         <columns>copado__Status__c</columns>
         <columns>copado__Project__c</columns>
-        <columns>copado__Epic__c</columns>
-        <columns>copado__Sprint__c</columns>
-        <columns>copado__Release__c</columns>
-        <columns>LAST_UPDATE</columns>
+        <columns>OWNER.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -6807,6 +6866,10 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <fullName>Rejected</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>To Do</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
     </recordTypes>
     <recordTypes>
@@ -7252,6 +7315,10 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
             </values>
             <values>
                 <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To Do</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -7701,6 +7768,10 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <fullName>Rejected</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>To Do</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
     </recordTypes>
     <searchLayouts>
@@ -7728,6 +7799,13 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Cancelling_a_child_user_story_bundled</fullName>
+        <active>true</active>
+        <description>Cancelling a child user story is not allowed.</description>
+        <errorConditionFormula>NOT( ISBLANK( Bundle_User_Story__c ) )  &amp;&amp;   ISPICKVAL(copado__Status__c, &apos;Cancelled&apos;)</errorConditionFormula>
+        <errorMessage>The user story status cannot be changed to Cancelled since it is part of a bundle and the bundle will continue moving the changes committed in this user story. You need to cancel the parent user story bundle first in order to cancel this user story.</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>Pull_Request_Approved</fullName>
         <active>false</active>
@@ -7812,6 +7890,18 @@ SCA_Score__c &gt; 0
         <errorMessage>Test scratch orgs cannot be used for developments</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>User_Story_Bundle</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Bundle User Stories</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/CUSB_UserStoryBundle</url>
+    </webLinks>
     <webLinks>
         <fullName>copado__Add_Apex_Tests</fullName>
         <availability>online</availability>
