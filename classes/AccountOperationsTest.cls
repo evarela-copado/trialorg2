@@ -1,7 +1,7 @@
 @IsTest
 private class AccountOperationsTest {
     @isTest static void setDefaultDescription(){
-        Account acc = new Account(Name = 'My Test Account1',Description='Default description');
+        Account acc = new Account(Name = 'My Test Account2',Description='Default description');
         insert acc;
         acc = AccountOperations.setDefaultDescription(acc);
         System.assertEquals('Default description', acc.Description);
