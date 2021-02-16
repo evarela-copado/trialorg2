@@ -7860,7 +7860,7 @@ SCA_Score__c &gt; 0
     </validationRules>
     <validationRules>
         <fullName>copado__Promote_User_Story_Apex_validation</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>If User Story has apex code, validate that the minimum code coverage has been met.</description>
         <errorConditionFormula>AND(
   copado__Has_Apex_Code__c = true,
