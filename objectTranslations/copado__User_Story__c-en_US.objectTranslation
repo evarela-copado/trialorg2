@@ -49,12 +49,33 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
+        <label><!-- Bundle User Story --></label>
+        <name>Bundle_User_Story__c</name>
+        <relationshipLabel><!-- Bundled User Stories --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Datetime Completed --></label>
         <name>Datetime_Completed__c</name>
     </fields>
     <fields>
         <label><!-- Datetime Deployed To Production --></label>
         <name>Datetime_Deployed_To_Production__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Bundle --></label>
+        <name>Is_Bundle__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>JIRA_key__c</name>
     </fields>
     <fields>
         <label><!-- Lead Time (Hours) --></label>
@@ -749,6 +770,10 @@
             <masterLabel>Rejected</masterLabel>
             <translation><!-- Rejected --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>To Do</masterLabel>
+            <translation><!-- To Do --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help><!-- If checked, the User Story will not be indexed for Copado&apos;s Overlap Awareness. --></help>
@@ -838,6 +863,10 @@
         <name>copado__User_Story</name>
     </recordTypes>
     <validationRules>
+        <errorMessage><!-- The user story status cannot be changed to Cancelled since it is part of a bundle and the bundle will continue moving the changes committed in this user story. You need to cancel the parent user story bundle first in order to cancel this user story. --></errorMessage>
+        <name>Cancelling_a_child_user_story_bundled</name>
+    </validationRules>
+    <validationRules>
         <errorMessage><!-- A pull request must first be approved in order to promote this User Story. --></errorMessage>
         <name>Pull_Request_Approved</name>
     </validationRules>
@@ -857,6 +886,10 @@
         <errorMessage><!-- Test scratch orgs cannot be used for developments --></errorMessage>
         <name>copado__Test_scratch_orgs_cannot_be_used_for_dev</name>
     </validationRules>
+    <webLinks>
+        <label><!-- User_Story_Bundle --></label>
+        <name>User_Story_Bundle</name>
+    </webLinks>
     <webLinks>
         <label><!-- Add_Apex_Tests --></label>
         <name>copado__Add_Apex_Tests</name>
