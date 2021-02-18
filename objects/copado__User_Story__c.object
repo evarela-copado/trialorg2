@@ -8058,6 +8058,19 @@ SCA_Score__c &gt; 0
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}QuickCreateUserStories?sid={!copado__Sprint__c.Id}</url>
     </webLinks>
     <webLinks>
+        <fullName>copado__Open_Org</fullName>
+        <availability>online</availability>
+        <description>Open the org speficied in the org credential for the US</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Open Org</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}ScratchOrgOpen?id={! copado__User_Story__c.copado__Org_CredentialId__c }</url>
+    </webLinks>
+    <webLinks>
         <fullName>copado__Perform_Validation</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
