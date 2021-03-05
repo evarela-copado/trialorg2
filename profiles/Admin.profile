@@ -3163,11 +3163,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Bicycle__c.AccountLookupToMD__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Bicycle__c.PLtoMultiPL__c</field>
         <readable>true</readable>
     </fieldPermissions>
