@@ -155,15 +155,16 @@
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AccountLookupToMD__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>AccountLookupToMD</label>
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Bicycles</relationshipLabel>
         <relationshipName>Bicycles</relationshipName>
-        <required>false</required>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
         <fullName>PLtoMultiPL__c</fullName>
@@ -171,7 +172,7 @@
         <label>PLtoMultiPL</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
+        <type>MultiselectPicklist</type>
         <valueSet>
             <restricted>true</restricted>
             <valueSetDefinition>
@@ -193,6 +194,7 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+        <visibleLines>3</visibleLines>
     </fields>
     <label>Bicycle</label>
     <nameField>
