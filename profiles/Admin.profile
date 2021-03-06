@@ -11430,6 +11430,10 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
+        <tab>Bicycle__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Copado_Integration_Setting__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
