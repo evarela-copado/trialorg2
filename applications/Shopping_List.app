@@ -10,4 +10,5 @@
     <tabs>Getting_Started</tabs>
     <tabs>Project__c</tabs>
     <tabs>Invoice__c</tabs>
+    <tabs>Bicycle__c</tabs>
 </CustomApplication>
