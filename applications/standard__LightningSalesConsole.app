@@ -21,9 +21,13 @@
     <tabs>standard-File</tabs>
     <tabs>Project__c</tabs>
     <tabs>Invoice__c</tabs>
+    <tabs>Bicycle__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Bicycle__c</tab>
+        </mappings>
         <mappings>
             <tab>Invoice__c</tab>
         </mappings>

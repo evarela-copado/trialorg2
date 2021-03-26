@@ -25,4 +25,5 @@
     <tabs>copado__Data_Template__c</tabs>
     <tabs>copado__Record_Matching_Formula__c</tabs>
     <tabs>copado__Application__c</tabs>
+    <tabs>Bicycle__c</tabs>
 </CustomApplication>
