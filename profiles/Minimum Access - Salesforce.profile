@@ -2848,6 +2848,11 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.AccountLookup__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.AccountNumber</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2865,6 +2870,11 @@
         <editable>false</editable>
         <field>Account.BillingAddress</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Branch_Number__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -2914,6 +2924,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.Phone</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.PicklistToMultipicklist__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3149,6 +3164,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>AuthorizationFormText.SummaryAuthFormText</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Bicycle__c.PLtoMultiPL__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9122,6 +9142,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Bicycle__c-Bicycle Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Callout_Log__c-Callout Log Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -9132,6 +9155,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>ContactPointPhone-Contact Point Phone Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContentVersion-Content Version Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Copado_Integration_Setting__c-Copado Integration Setting Layout</layout>
@@ -9910,6 +9936,10 @@
         <recordType>copado__User_Story__c.copado__User_Story</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+    <tabVisibilities>
+        <tab>Bicycle__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>Copado_Integration_Setting__c</tab>
         <visibility>DefaultOn</visibility>
