@@ -2,7 +2,7 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0087FD</headerColor>
-        <logo>Screen_Shot_20190516_at_113044_AM</logo>
+        <logo>download</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
@@ -13,6 +13,78 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Copado Trial</label>
     <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__User_Story</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__User_Story</recordType>
+        <type>Flexipage</type>
+        <profile>System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__User_Story</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__User_Story</recordType>
+        <type>Flexipage</type>
+        <profile>System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__Investigation</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__Investigation</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__Investigation</recordType>
+        <type>Flexipage</type>
+        <profile>System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page_Unmanaged2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__Investigation</recordType>
+        <type>Flexipage</type>
+        <profile>System Admin</profile>
+    </profileActionOverrides>
     <setupExperience>all</setupExperience>
     <tabs>copado__Org__c</tabs>
     <tabs>copado__Deployment_Flow__c</tabs>
