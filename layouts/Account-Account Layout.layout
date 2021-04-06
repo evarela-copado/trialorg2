@@ -53,7 +53,9 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Rating</field>
+
+                <field>Site</field>
+
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
