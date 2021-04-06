@@ -52,7 +52,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>AccountSource</field>
+                <field>Site</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
