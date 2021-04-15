@@ -1,6 +1,6 @@
 public class AccountOperations {
     public static Account setDefaultDescription(Account a) {
-        a.Description = 'Default description1234567891011121314';
+        a.Description = 'Default description123456789101112131415';
         a.PicklistToMultipicklist__c = 'Value 1';
         return a;
     }
