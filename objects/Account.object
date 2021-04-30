@@ -411,6 +411,22 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Test_Field_4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Test Field 4</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Test_Field_5__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Test Field 5</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Test_Field__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>

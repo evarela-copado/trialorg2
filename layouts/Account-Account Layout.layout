@@ -10,6 +10,10 @@
         <label>Account Information</label>
         <layoutColumns>
             <layoutItems>
+                <behavior>Required</behavior>
+                <field>Encrypted_Field_Test__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
             </layoutItems>
@@ -36,6 +40,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Test_Field__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Test_Field_4__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Test_Field_5__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -165,6 +177,9 @@
         </layoutColumns>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>Encrypted_Field_Test__c</fields>
+    </miniLayout>
     <quickActionList>
         <quickActionListItems>
             <quickActionName>FeedItem.TextPost</quickActionName>
