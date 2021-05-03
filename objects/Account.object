@@ -363,6 +363,35 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Preferred_Pronoun__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Pronoun</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>He/Him</fullName>
+                    <default>false</default>
+                    <label>He/Him</label>
+                </value>
+                <value>
+                    <fullName>She/Her</fullName>
+                    <default>false</default>
+                    <label>She/Her</label>
+                </value>
+                <value>
+                    <fullName>They</fullName>
+                    <default>false</default>
+                    <label>They</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Rating</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
