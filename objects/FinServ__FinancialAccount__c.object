@@ -2,6 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <fullName>Investment_Subtype__c</fullName>
+        <description>desc</description>
         <externalId>false</externalId>
         <label>Investment Subtype</label>
         <required>false</required>
