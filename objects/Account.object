@@ -403,6 +403,14 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Test_Field_10__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Test Field 10</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Test_Field_3__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
