@@ -68,6 +68,10 @@
                 <behavior>Edit</behavior>
                 <field>Test_Field_9__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Test_Field_10__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
