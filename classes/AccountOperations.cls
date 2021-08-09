@@ -4,4 +4,6 @@ public class AccountOperations {
         a.PicklistToMultipicklist__c = 'Value 1';
         return a;
     }
+    //Change made in dev2 same line
+    //Change made in dev2 DIFF line
 }
