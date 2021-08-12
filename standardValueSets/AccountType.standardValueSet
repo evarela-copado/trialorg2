@@ -27,6 +27,16 @@
         <label>Investor</label>
     </standardValue>
     <standardValue>
+        <fullName>New Customer</fullName>
+        <default>false</default>
+        <label>New Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
         <fullName>Partner</fullName>
         <default>false</default>
         <label>Partner</label>
@@ -45,10 +55,5 @@
         <fullName>Reseller</fullName>
         <default>false</default>
         <label>Reseller</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Other</fullName>
-        <default>false</default>
-        <label>Other</label>
     </standardValue>
 </StandardValueSet>
