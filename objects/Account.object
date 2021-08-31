@@ -251,7 +251,7 @@
     </fields>
     <fields>
         <fullName>Active__c</fullName>
-        <description>{!Environment.restPath}</description>
+        <description>/v1/testingapi/dev/polies/%hello%?env=devInt</description>
         <externalId>false</externalId>
         <inlineHelpText>{!Environment.restPath}</inlineHelpText>
         <label>Active</label>
