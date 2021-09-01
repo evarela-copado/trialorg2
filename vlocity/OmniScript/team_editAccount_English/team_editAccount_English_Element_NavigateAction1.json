@@ -28,7 +28,7 @@
         "targetId": "%ContextId%",
         "targetLWCLayout": "lightning",
         "targetType": "Web Page",
-        "targetUrl": "{!Environment.restPath}",
+        "targetUrl": "Team Starter Edit Contact",
         "validationRequired": "Submit",
         "variant": "brand",
         "wpm": false
