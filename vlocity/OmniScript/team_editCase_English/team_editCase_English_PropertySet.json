@@ -12,6 +12,7 @@
     "consoleTabLabel": "New",
     "consoleTabTitle": null,
     "currencyCode": "",
+    "currentLanguage": "en_US",
     "disableUnloadWarn": true,
     "elementTypeToHTMLTemplateMapping": {
     },
