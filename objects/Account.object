@@ -576,26 +576,6 @@
         <url>http://news.altavista.com/search?nc=0&amp;q={!Account_Name}</url>
     </webLinks>
     <webLinks>
-        <fullName>Destructive_Change_Test</fullName>
-        <availability>online</availability>
-        <description>Button added to pg layout to test deleting the reference when this button is deleted.</description>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <hasMenubar>false</hasMenubar>
-        <hasScrollbars>true</hasScrollbars>
-        <hasToolbar>false</hasToolbar>
-        <height>600</height>
-        <isResizable>true</isResizable>
-        <linkType>url</linkType>
-        <masterLabel>Destructive Change Test</masterLabel>
-        <openType>newWindow</openType>
-        <position>none</position>
-        <protected>false</protected>
-        <showsLocation>false</showsLocation>
-        <showsStatus>false</showsStatus>
-        <url>https://copatrialorg2--dev1.lightning.force.com/</url>
-    </webLinks>
-    <webLinks>
         <fullName>GoogleMaps</fullName>
         <availability>online</availability>
         <displayType>link</displayType>
