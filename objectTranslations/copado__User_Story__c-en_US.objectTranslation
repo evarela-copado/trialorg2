@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
+        <label><!-- Bundle --></label>
+        <name>copado__Bundle</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- CBM Fields --></label>
         <name>copado__CBM_Fields</name>
     </fieldSets>
     <fieldSets>
         <label><!-- Commit Files Information --></label>
         <name>copado__Commit_Files_Information</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Commit Page --></label>
+        <name>copado__Commit_Page</name>
     </fieldSets>
     <fieldSets>
         <label><!-- Copado Header Fields --></label>
@@ -27,6 +35,10 @@
     <fieldSets>
         <label><!-- Promotion Related List --></label>
         <name>copado__PromotionRelatedList</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Promotion Related List Datatable --></label>
+        <name>copado__Promotion_Related_List_Datatable</name>
     </fieldSets>
     <fieldSets>
         <label><!-- SprintWall_MassUpdate --></label>
@@ -54,6 +66,10 @@
         <relationshipLabel><!-- Bundled User Stories --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Contains Admin Profile --></label>
+        <name>Contains_Admin_Profile__c</name>
+    </fields>
+    <fields>
         <label><!-- Datetime Completed --></label>
         <name>Datetime_Completed__c</name>
     </fields>
@@ -62,20 +78,12 @@
         <name>Datetime_Deployed_To_Production__c</name>
     </fields>
     <fields>
-        <label><!-- Enable Logs --></label>
-        <name>Enable_Logs__c</name>
-    </fields>
-    <fields>
-        <label><!-- External Id --></label>
-        <name>External_Id__c</name>
+        <label><!-- Has Vlocity Components --></label>
+        <name>Has_Vlocity_Components__c</name>
     </fields>
     <fields>
         <label><!-- Is Bundle --></label>
         <name>Is_Bundle__c</name>
-    </fields>
-    <fields>
-        <label><!-- JIRA key --></label>
-        <name>JIRA_key__c</name>
     </fields>
     <fields>
         <label><!-- Lead Time (Hours) --></label>
@@ -90,12 +98,36 @@
         <name>Number_Of_Components__c</name>
     </fields>
     <fields>
+        <label><!-- Qentinel Suite API Key --></label>
+        <name>Qentinel_Suite_API_Key__c</name>
+    </fields>
+    <fields>
         <label><!-- SCA Score --></label>
         <name>SCA_Score__c</name>
     </fields>
     <fields>
         <label><!-- SCA Violations --></label>
         <name>SCA_Violations__c</name>
+    </fields>
+    <fields>
+        <label><!-- ServiceNow Status --></label>
+        <name>ServiceNow_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Acceptance Criteria Status --></label>
@@ -258,9 +290,17 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Git Repository --></label>
+        <name>copado__Git_Repository__c</name>
+    </fields>
+    <fields>
         <help><!-- Value automatically updated by Copado whenever there are Apex Classes added or committed in the User Story. --></help>
         <label><!-- Has Apex Code --></label>
         <name>copado__Has_Apex_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Bundle --></label>
+        <name>copado__Is_Bundle__c</name>
     </fields>
     <fields>
         <help><!-- Latest Compliance Scan execution date. --></help>
@@ -644,13 +684,18 @@
     </fields>
     <fields>
         <help><!-- Org Credential used to add or commit metadata and to promote and deploy the User Story to the next Environment. --></help>
-        <label><!-- Org Credential --></label>
+        <label><!-- Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel><!-- User Stories (Org Credential) --></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Credential) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Parent Epic Title --></label>
         <name>copado__Parent_Epic_Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field auto-populates and displays the pipeline platform --></help>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
     </fields>
     <fields>
         <help><!-- Numeric value to determine which User Stories are more urgent and should be completed first. --></help>
@@ -850,6 +895,18 @@
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
     </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>copadoccmint__JIRA_key__c</name>
+    </fields>
     <recordTypes>
         <label><!-- Bug --></label>
         <name>copado__Bug</name>
@@ -862,9 +919,17 @@
         <label><!-- User Story --></label>
         <name>copado__User_Story</name>
     </recordTypes>
+    <recordTypes>
+        <label><!-- Utility --></label>
+        <name>copado__Utility</name>
+    </recordTypes>
     <validationRules>
         <errorMessage><!-- The user story status cannot be changed to Cancelled since it is part of a bundle and the bundle will continue moving the changes committed in this user story. You need to cancel the parent user story bundle first in order to cancel this user story. --></errorMessage>
         <name>Cancelling_a_child_user_story_bundled</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Admin FLS is required for Custom Field --></errorMessage>
+        <name>FLS_For_Admin</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- A pull request must first be approved in order to promote this User Story. --></errorMessage>
@@ -911,6 +976,10 @@
         <name>copado__Assign_to_Release</name>
     </webLinks>
     <webLinks>
+        <label><!-- Commit_Data --></label>
+        <name>copado__Commit_Data</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Commit_Files --></label>
         <name>copado__Commit_Files</name>
     </webLinks>
@@ -919,12 +988,20 @@
         <name>copado__Copado_DX</name>
     </webLinks>
     <webLinks>
+        <label><!-- Create_Bundle --></label>
+        <name>copado__Create_Bundle</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Create_Scratch_Org --></label>
         <name>copado__Create_Scratch_Org</name>
     </webLinks>
     <webLinks>
         <label><!-- Import_to_User_Story --></label>
         <name>copado__Import_to_User_Story</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MC_Commit_Changes --></label>
+        <name>copado__MC_Commit_Changes</name>
     </webLinks>
     <webLinks>
         <label><!-- Manage_Selenium_Tests --></label>

@@ -162,6 +162,7 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <isServiceCloudConsole>true</isServiceCloudConsole>
     <preferences>
         <enableCustomizeMyTabs>false</enableCustomizeMyTabs>
@@ -182,6 +183,7 @@
     <tabs>Project__c</tabs>
     <tabs>Invoice__c</tabs>
     <tabs>Bicycle__c</tabs>
+    <tabs>copado__Step__c</tabs>
     <workspaceConfig>
         <mappings>
             <tab>Bicycle__c</tab>
@@ -191,6 +193,9 @@
         </mappings>
         <mappings>
             <tab>Project__c</tab>
+        </mappings>
+        <mappings>
+            <tab>copado__Step__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>

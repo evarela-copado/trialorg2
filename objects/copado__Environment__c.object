@@ -128,16 +128,22 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Environment_Record_Page1</content>
         <formFactor>Large</formFactor>
-        <type>Default</type>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Environment_Record_Page1</content>
         <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -154,6 +160,52 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Data_Backup_Enforcement__c</fullName>
+        <description>Enforce data backups when executing a Data Template deployment to this Environment. The &quot;Before and after deployment&quot; is the recommended option since it registers a precise snapshot of the deployed records for a simple Data Recovery process if needed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enforce data backups when executing a Data Template deployment to this Environment. The &quot;Before and after deployment&quot; is the recommended option since it registers a precise snapshot of the deployed records for a simple Data Recovery process if needed.</inlineHelpText>
+        <label>Data Backup Enforcement</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Before and after deployment</fullName>
+                    <default>false</default>
+                    <label>Before and after deployment</label>
+                </value>
+                <value>
+                    <fullName>Before deployment</fullName>
+                    <default>false</default>
+                    <label>Before deployment</label>
+                </value>
+                <value>
+                    <fullName>After deployment</fullName>
+                    <default>false</default>
+                    <label>After deployment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__CommitJobTemplateOverride__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Select a Job Template to override the default Commit Job Template defined in the Pipeline</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select a Job Template to override the default Commit Job Template defined in the Pipeline</inlineHelpText>
+        <label>Commit Job Template Override</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
+        <relationshipLabel>Environments (Commit Job Template Override)</relationshipLabel>
+        <relationshipName>Environments2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
     <fields>
         <fullName>copado__Compliance_Rule_Group__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -243,6 +295,59 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Deployment_Automation_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select an Automation Template to override the default Deployment Behaviour defined in the Pipeline</inlineHelpText>
+        <label>Deployment Automation Override</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only active automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <filterItems>
+                <field>copado__Deployment__c.copado__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>copado__Deployment__c</referenceTo>
+        <relationshipLabel>Environments (Deployment Automation Override)</relationshipLabel>
+        <relationshipName>DeploymentAutomationEnvironments</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Deployment_Job_Template_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Deployment Job Template Override</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
+        <relationshipLabel>Environments (Deployment Job Template Override)</relationshipLabel>
+        <relationshipName>Environments1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Enable_Rollback__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</inlineHelpText>
+        <label>Enable Rollback</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Index_Back_Promotion_metadata__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -260,6 +365,15 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>copado__Last_Refresh_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Refresh Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>copado__Latest_Deployment_Status__c</fullName>
@@ -380,6 +494,41 @@
         <unique>true</unique>
     </fields>
     <fields>
+        <fullName>copado__Platform__c</fullName>
+        <defaultValue>&quot;Salesforce&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Platform</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Salesforce</fullName>
+                    <default>true</default>
+                    <label>Salesforce</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>MuleSoft</fullName>
+                    <default>false</default>
+                    <label>MuleSoft</label>
+                </value>
+                <value>
+                    <fullName>Heroku</fullName>
+                    <default>false</default>
+                    <label>Heroku</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>copado__Promotion_Default_Credential__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -404,6 +553,48 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Promotion_Job_Template_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Promotion Job Template Override</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
+        <relationshipLabel>Environments</relationshipLabel>
+        <relationshipName>Environments</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Promotion_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select an Automation Template to override the default Promotion Behaviour defined in the Pipeline</inlineHelpText>
+        <label>Promotion Automation Override</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only active automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <filterItems>
+                <field>copado__Deployment__c.copado__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>copado__Deployment__c</referenceTo>
+        <relationshipLabel>Environments (Promotion Automation Override)</relationshipLabel>
+        <relationshipName>PromotionAutomationsEnvironments</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Run_all_tests__c</fullName>
@@ -508,7 +699,31 @@
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
+        <active>true</active>
+        <description>An environment cannot have the same automation template for both Promote and Deploy</description>
+        <errorConditionFormula>AND(
+   NOT(ISBLANK(copado__Promotion_Override__c)),
+   copado__Promotion_Override__c == copado__Deployment_Automation_Override__c
+)</errorConditionFormula>
+        <errorDisplayField>copado__Deployment_Automation_Override__c</errorDisplayField>
+        <errorMessage>An environment cannot have the same automation template for both Promote and Deploy</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Install_2G_Package</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Install 2G Package</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!URLFOR(&apos;/flow/Package_Installer&apos;)}</url>
+    </webLinks>
     <webLinks>
         <fullName>copado__Find_Replace_Rule_Editor</fullName>
         <availability>online</availability>
