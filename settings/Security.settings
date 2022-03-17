@@ -15,6 +15,46 @@
             <start>132.0.0.0</start>
         </ipRanges>
         <ipRanges>
+            <description>Copado</description>
+            <end>54.175.230.252</end>
+            <start>54.175.230.252</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Copado</description>
+            <end>54.173.229.200</end>
+            <start>54.173.229.200</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Copado</description>
+            <end>54.88.136.216</end>
+            <start>54.88.136.216</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Copado</description>
+            <end>54.84.188.199</end>
+            <start>54.84.188.199</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Qentinel</description>
+            <end>52.212.32.52</end>
+            <start>52.212.32.52</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Copado</description>
+            <end>35.174.57.133</end>
+            <start>35.174.57.133</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Copado</description>
+            <end>18.233.58.2</end>
+            <start>18.233.58.2</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Qentinel?</description>
+            <end>18.203.104.35</end>
+            <start>18.203.104.35</start>
+        </ipRanges>
+        <ipRanges>
             <end>1.255.255.255</end>
             <start>0.0.0.0</start>
         </ipRanges>
@@ -32,9 +72,10 @@
     </passwordPolicies>
     <sessionSettings>
         <allowUserAuthenticationByCertificate>false</allowUserAuthenticationByCertificate>
-        <canConfirmEmailChangeInLightningCommunities>false</canConfirmEmailChangeInLightningCommunities>
+        <canConfirmEmailChangeInLightningCommunities>true</canConfirmEmailChangeInLightningCommunities>
         <canConfirmIdentityBySmsOnly>false</canConfirmIdentityBySmsOnly>
         <disableTimeoutWarning>false</disableTimeoutWarning>
+        <enableBuiltInAuthenticator>false</enableBuiltInAuthenticator>
         <enableCSPOnEmail>true</enableCSPOnEmail>
         <enableCSRFOnGet>true</enableCSRFOnGet>
         <enableCSRFOnPost>true</enableCSRFOnPost>
@@ -50,7 +91,6 @@
         <enablePostForSessions>false</enablePostForSessions>
         <enableSMSIdentity>false</enableSMSIdentity>
         <enableU2F>false</enableU2F>
-        <enableUpgradeInsecureRequests>true</enableUpgradeInsecureRequests>
         <enableXssProtection>true</enableXssProtection>
         <enforceIpRangesEveryRequest>false</enforceIpRangesEveryRequest>
         <enforceUserDeviceRevoked>false</enforceUserDeviceRevoked>
@@ -58,18 +98,19 @@
         <forceRelogin>false</forceRelogin>
         <hasRetainedLoginHints>false</hasRetainedLoginHints>
         <hasUserSwitching>true</hasUserSwitching>
-        <hstsOnForcecomSites>true</hstsOnForcecomSites>
         <identityConfirmationOnEmailChange>false</identityConfirmationOnEmailChange>
-        <identityConfirmationOnTwoFactorRegistrationEnabled>true</identityConfirmationOnTwoFactorRegistrationEnabled>
+        <identityConfirmationOnTwoFactorRegistrationEnabled>false</identityConfirmationOnTwoFactorRegistrationEnabled>
         <lockSessionsToDomain>true</lockSessionsToDomain>
         <lockSessionsToIp>false</lockSessionsToIp>
         <lockerServiceCSP>true</lockerServiceCSP>
         <lockerServiceNext>false</lockerServiceNext>
+        <lockerServiceNextControl>false</lockerServiceNextControl>
         <redirectionWarning>true</redirectionWarning>
         <referrerPolicy>true</referrerPolicy>
         <requireHttpOnly>false</requireHttpOnly>
-        <requireHttps>true</requireHttps>
         <sessionTimeout>TwoHours</sessionTimeout>
+        <sidToken3rdPartyAuraApp>false</sidToken3rdPartyAuraApp>
+        <useLocalStorageForLogoutUrl>false</useLocalStorageForLogoutUrl>
     </sessionSettings>
     <singleSignOnSettings>
         <enableCaseInsensitiveFederationID>false</enableCaseInsensitiveFederationID>

@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Sample App: Shopping List</label>
     <tabs>standard-Chatter</tabs>
     <tabs>Item__c</tabs>
@@ -11,4 +12,5 @@
     <tabs>Project__c</tabs>
     <tabs>Invoice__c</tabs>
     <tabs>Bicycle__c</tabs>
+    <tabs>copado__Step__c</tabs>
 </CustomApplication>
