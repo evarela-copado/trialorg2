@@ -47,22 +47,22 @@
         <label>Jira Integration</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Copado_Integration_Setting__c</field>
+                <behavior>Edit</behavior>
+                <field>copadoccmint__Project_External_Id__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>JQL_Extended_Filter__c</field>
+                <field>copadoccmint__JQL_Extended_Filter__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Project_External_Id__c</field>
+                <behavior>Required</behavior>
+                <field>copadoccmint__Copado_Integration_Setting__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Enable_Logs__c</field>
+                <field>copadoccmint__Enable_Logs__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -150,14 +150,33 @@
             <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Sync_External_User_Stories</actionName>
+            <actionName>copadoccmint__Sync_External_User_Stories</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>2</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Field_Mapping__c.Project__c</relatedList>
+        <fields>copadoccmint__Salesforce_Field_Name__c</fields>
+        <fields>copadoccmint__Third_Party_Field_Name__c</fields>
+        <fields>copadoccmint__Exclude_from_su__c</fields>
+        <fields>copadoccmint__Exclude_from_tpu__c</fields>
+        <fields>copadoccmint__Target_Field_Type__c</fields>
+        <relatedList>copadoccmint__Field_Mapping__c.copadoccmint__Project__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>OBJECT_ID</fields>
+        <fields>copadoccmint__Salesforce_Record_Type_Name__c</fields>
+        <fields>copadoccmint__Third_Party_Record_Type_Name__c</fields>
+        <relatedList>copadoccmint__Record_Type_Mapping__c.copadoccmint__Project__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>copadoccmint__Response_Body__c</fields>
+        <fields>copadoccmint__Status__c</fields>
+        <fields>copadoccmint__Status_Code__c</fields>
+        <relatedList>copadoccmint__Callout_Log__c.copadoccmint__Project__c</relatedList>
     </relatedLists>
     <relatedLists>
         <customButtons>copado__Mass_Add_User_Stories</customButtons>
@@ -196,10 +215,6 @@
         <fields>copado__Destination_Environment__c</fields>
         <fields>copado__Destination_Org_Credential__c</fields>
         <relatedList>copado__Promotion__c.copado__Project__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Callout_Log__c.Project__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
