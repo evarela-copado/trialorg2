@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <tabs>standard-Chatter</tabs>
     <tabs>standard-UserProfile</tabs>
     <tabs>standard-OtherUserProfile</tabs>
@@ -13,4 +14,5 @@
     <tabs>Project__c</tabs>
     <tabs>Invoice__c</tabs>
     <tabs>Bicycle__c</tabs>
+    <tabs>copado__Step__c</tabs>
 </CustomApplication>

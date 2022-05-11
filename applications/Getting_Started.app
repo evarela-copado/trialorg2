@@ -5,10 +5,12 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Getting Started</label>
     <tabs>standard-Chatter</tabs>
     <tabs>Getting_Started</tabs>
     <tabs>Project__c</tabs>
     <tabs>Invoice__c</tabs>
     <tabs>Bicycle__c</tabs>
+    <tabs>copado__Step__c</tabs>
 </CustomApplication>
